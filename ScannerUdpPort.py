@@ -3,7 +3,7 @@ import time
 import threading
 
 
-def __scanner_udp_port(ip, port, messege):
+def __scanner_udp_port(ip, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.settimeout(2)
     try:
