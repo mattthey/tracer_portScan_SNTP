@@ -11,8 +11,10 @@ def __scanner_tcp_port(ip, port):
         # sock.send(bytes(b'GET /other-19 HTTP/1.1\n\n'))
         # data, addr = sock.recv(1024)
         print("port=", port, "\\tcp is OPEN")
-    except:
+    except socket.timeout:
         pass
+    except Exception as e:
+        print('непонятная ошибка с портом', port)
     finally:
         sock.close()
 
